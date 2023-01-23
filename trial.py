@@ -1,4 +1,9 @@
 
+import subprocess
+
+subprocess.run(["pip", "install", "-U", "scikit-learn"])
+subprocess.run(["pip", "install", "-U", "scipy"])
+subprocess.run(["pip", "install", "-U", "matplotlib"])
 
 
 from sklearn import svm, tree
