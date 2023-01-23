@@ -1,5 +1,5 @@
 
-pip install -U scikit-learn
+-pip install -U scikit-learn
 from sklearn import svm, tree
 from sklearn.metrics import confusion_matrix, accuracy_score
 import matplotlib.pyplot as plt
