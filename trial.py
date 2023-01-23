@@ -3,8 +3,8 @@ subprocess.run(["pip", "install", "-U", "scikit-learn", "scipy", "matplotlib"])
 
 
 
-
-from sklearn import svm, tree
+from sklearn import svm.SVC()
+from sklearn import tree.DecisionTreeClassifier()
 from sklearn.metrics import confusion_matrix, accuracy_score
 import matplotlib.pyplot as plt
 import numpy as np
@@ -48,7 +48,7 @@ if data is not None:
     index = st.selectbox("Select a Stock Exchange", input)
 
     if index == 'SVM':
-        clf = svm.SVC()
+        clf = SVC()
     elif index == 'Random Forest':
         clf = RandomForestClassifier()
     elif index == 'K-NN':
