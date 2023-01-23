@@ -1,5 +1,6 @@
-from sklearn import svm.SVC()
-from sklearn import tree.DecisionTreeClassifier()
+#Accuracy reference: https://github.com/kshitijved/Support_Vector_Machine
+
+from sklearn import svm, tree
 from sklearn.metrics import confusion_matrix, accuracy_score
 import matplotlib.pyplot as plt
 import numpy as np
@@ -43,7 +44,7 @@ if data is not None:
     index = st.selectbox("Select a Stock Exchange", input)
 
     if index == 'SVM':
-        clf = SVC()
+        clf = svm.SVC()
     elif index == 'Random Forest':
         clf = RandomForestClassifier()
     elif index == 'K-NN':
@@ -63,22 +64,22 @@ if data is not None:
 
 
     #plot the data points
-    def plot(x_test):
-        plt.scatter(x_test[:, 0], x_test[:, 1], c=y_pred, cmap='rainbow')
+#     def plot(x_test):
+#         plt.scatter(x_test[:, 0], x_test[:, 1], c=y_pred, cmap='rainbow')
 
-        # Add a legend to indicate which class each color corresponds to
-        plt.legend(['Class 1', 'Class 2', 'CLASS 3'])
+#         # Add a legend to indicate which class each color corresponds to
+#         plt.legend(['Class 1', 'Class 2', 'CLASS 3'])
 
-        # Add a title and axis labels to the plot
-        plt.title("Final Classified Data Points")
-        plt.xlabel("Feature 1")
-        plt.ylabel("Feature 2")
+#         # Add a title and axis labels to the plot
+#         plt.title("Final Classified Data Points")
+#         plt.xlabel("Feature 1")
+#         plt.ylabel("Feature 2")
 
-        # Show the plot
-        plt.show()
-        st.pyplot()
+#         # Show the plot
+#         plt.show()
+#         st.pyplot()
 
-    # Create a scatter plot of the final classified data points
+#     # Create a scatter plot of the final classified data points
     
 
 
@@ -90,11 +91,10 @@ if data is not None:
         y_pred = clf.predict(x_test)
 
         # knnn(x_train, y_train, clf, sc)
-        plot(x_test)
+#         plot(x_test)
         cm = confusion_matrix(y_test, y_pred)
         st.write(cm)
         st.write(accuracy_score(y_test, y_pred))
-
 
 
 
