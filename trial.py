@@ -1,6 +1,6 @@
 #Accuracy reference: https://github.com/kshitijved/Support_Vector_Machine
 
-from sklearn import svm, tree
+import sklearn as sk
 from sklearn.metrics import confusion_matrix, accuracy_score
 import matplotlib.pyplot as plt
 import numpy as np
@@ -44,17 +44,17 @@ if data is not None:
     index = st.selectbox("Select a Stock Exchange", input)
 
     if index == 'SVM':
-        clf = svm.SVC()
+        clf = sk.svm.SVC()
     elif index == 'Random Forest':
         clf = RandomForestClassifier()
     elif index == 'K-NN':
         clf = KNeighborsClassifier()
     elif index == 'Kernerl-SVM':
-        clf = svm.SVC(kernel='linear')
+        clf = sk.svm.SVC(kernel='linear')
     elif index == 'Naive Bayes':
         clf = GaussianNB()
     elif index == 'Decision Tree':
-        clf = tree.DecisionTreeClassifier()
+        clf = sk.tree.DecisionTreeClassifier()
     elif index == 'Logistic Regression':
         clf = LogisticRegression()
     else:
