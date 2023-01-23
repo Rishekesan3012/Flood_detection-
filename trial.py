@@ -1,8 +1,3 @@
-import subprocess
-subprocess.run(["pip", "install", "-U", "scikit-learn", "scipy", "matplotlib"])
-
-
-
 from sklearn import svm.SVC()
 from sklearn import tree.DecisionTreeClassifier()
 from sklearn.metrics import confusion_matrix, accuracy_score
