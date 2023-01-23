@@ -1,6 +1,5 @@
 
-import subprocess
-subprocess.run(["pip", "install", "-U", "scikit-learn"])
+
 
 from sklearn import svm, tree
 from sklearn.metrics import confusion_matrix, accuracy_score
