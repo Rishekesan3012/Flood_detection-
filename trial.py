@@ -1,4 +1,6 @@
-!pip install scikit-learn
+import subprocess
+subprocess.run(["pip", "install", "-U", "scikit-learn", "scipy", "matplotlib"])
+
 
 
 
